@@ -1,0 +1,22 @@
+* bib2item
+Convert a .bib file into a list of bibitems suitable for a journal
+submission
+
+Warning, used a lot of trim statements, not sure if they are needed
+Make sure you check the output for spurious , or .
+
+** Usage
+bib2item <path/to/bib/file>
+
+** Issues
+For some reason extra spaces get added into the title and a few other
+places.  No idea why.
+
+The regex strips all special characters values.  This means if there
+are any math or latex formatting in the bibtex values, they are likely
+lost.
+
+** TODO
+Add switches for more formats.  Right now one is supported
+Fix bugs in REGEX
+
