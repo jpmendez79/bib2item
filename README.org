@@ -1,13 +1,17 @@
 * bib2item
 Convert a .bib file into a list of bibitems suitable for a journal
-submission
+submission.  Output is written to STDOUT to cut and paste, but you can
+use a shell redirect to save to a file.
 
 Warning, used a lot of trim statements, not sure if they are needed
 Make sure you check the output for spurious , or .
 
+See ref.bib, test.tex, and test.pdf for an example.
+
 ** Usage
 bib2item <path/to/bib/file>
 
+For an example output, see the references.bib, test.tex, and test.pdf files
 ** Issues
 For some reason extra spaces get added into the title and a few other
 places.  No idea why.

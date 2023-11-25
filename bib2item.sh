@@ -35,7 +35,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
 	# title
 	if [[ $item =~ title ]]; then
 	    title="${value#"${value%%[![:space:]]*}"}"
-	    title="${title//[^[:alnum:] .,]/}"
+	    title="${title//[^[:alnum:] .,-]/}"
 	    title="${title%%[.,Th ,]}"
 	    # title="${title#?}"
 
@@ -44,7 +44,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
 
 	# eprint
 	if [[ $item =~ eprint ]]; then
-	    eprint="${value//[^[:alnum:] .,]/}"
+	    eprint="${value//[^[:alnum:] .,-]/}"
 	    eprint="${eprint%%[.,]}"
 	    eprint="${eprint#??}"
 	fi
@@ -59,7 +59,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
 
 	# primaryclass
  	if [[ $item =~ primaryClass ]]; then
-	    primcl="${value//[^[:alnum:] .,]/}"
+	    primcl="${value//[^[:alnum:] .,-]/}"
 	    primcl="${primcl%%[.,]}"
 	    primcl="${primcl#?}"
 	fi	
@@ -77,7 +77,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
  
 	# journal
 	if [[ $item =~ journal ]]; then
-	    journal="${value//[^[:alnum:] .,]/}"
+	    journal="${value//[^[:alnum:] .,-]/}"
 	    journal="${journal%%[.,]}"
 	fi
 
@@ -89,7 +89,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
 
 	# pages
 	if [[ $item =~ pages ]]; then
-	    pages="${value//[^[:alnum:] .,]/}"
+	    pages="${value//[^[:alnum:] .,-]/}"
 	    pages="${pages%%[.,]}"
 	fi
 
